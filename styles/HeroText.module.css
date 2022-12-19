@@ -1,0 +1,114 @@
+.forText {
+    position: absolute;
+    transform: translate(-260%, 70%) scale(1.4);
+}
+
+.wrapper {
+    height: calc(5.4rem + 1vw);
+    overflow: hidden;
+}
+
+.wrapper img {
+    margin-bottom: 2rem;
+}
+
+.textSvg {
+    margin-bottom: 2rem;
+    width: auto;
+}
+
+.textSvg:nth-of-type(1) {
+    background: transparent;
+    /* width="311" */
+    width: 40%;
+    width: calc(20% + 2vw);
+    width: auto;
+}
+
+.textSvg:nth-of-type(2) {
+    background: transparent;
+    /* width="665" */
+    /* width: 80%; */
+}
+.textSvg:nth-of-type(3) {
+    background: transparent;
+    /* width="438" */
+}
+.textSvg:nth-of-type(4) {
+    background: transparent;
+    /* width="540" */
+}
+
+.textSvg path,
+.forText path{
+    fill: var(--dark);
+}
+
+@media (prefers-color-scheme: dark) {
+    .textSvg path,
+    .forText path{
+        fill: var(--light);
+    }
+    /* .forText svg path{
+        stroke: var(--light);
+        stroke-width: 1;
+    } */
+}
+
+.slider {
+    width: 100%;
+    height: 31.4rem;
+    /* animation: slider 10s cubic-bezier(.17,.67,.42,1) 4s infinite; */
+    animation: slider 10s cubic-bezier(.78,.13,.15,.86) 4s infinite;
+}
+
+
+@keyframes slider {
+    0% {
+        transform: translate(0, 0%);
+    }
+    5% {
+        transform: translate(0, 0%);
+    }
+
+    20% {
+        transform: translate(0, -26%);
+    }
+    25% {
+        transform: translate(0, -26%);
+    }
+    30% {
+        transform: translate(0, -26%);
+    }
+
+    45% {
+        transform: translate(0, -52%);
+    }
+    50% {
+        transform: translate(0, -52%);
+    }
+    55% {
+        transform: translate(0, -52%);
+    }
+
+    70% {
+        transform: translate(0, -74%);
+    }
+    75% {
+        transform: translate(0, -74%);
+    }
+    85% {
+        transform: translate(0, -74%);
+    }
+
+    95% {
+        transform: translate(0, -100%);
+    }
+    100% {
+        transform: translate(0, -100%);
+    }
+}
+
+.a11y {
+    display: none;
+  }

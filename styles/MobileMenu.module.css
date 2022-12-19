@@ -1,0 +1,9 @@
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--col2);
+    z-index: 3;
+    transition: 0.3s ease;
+}

@@ -1,0 +1,95 @@
+.services {
+    background: var(--col1);
+    width: 100vw;
+    height: 100vh;
+}
+
+.retainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    min-height: 36rem;
+    max-width: 112rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8vw;
+}
+
+.servicesText {
+    width: 30vw;
+    font-size: calc(0.7rem + 0.7vw);
+}
+
+.servicesText h2 {
+    font-size: calc(2.8rem + 2.8vw);
+    margin-bottom: 2rem;
+}
+
+.servicesText p {
+    margin-bottom: 2rem;
+}
+
+.btnDiv {
+    margin-top: 4rem;
+}
+
+.servicesText button {
+    font-size: calc(0.8rem + 0.8vw);
+}
+
+.arrow {
+    border: 2px dashed orange;
+}
+
+.arrow {
+    fill: blue !important;
+}
+
+.primaryBtn {
+    border-radius: 2px;
+    position: relative;
+    background: var(--col3);
+    /* color: transparent; */
+    border: 1px solid var(--col1);
+    padding: 0.3rem 1.2rem;
+    margin-right: 1.2rem;
+}
+
+.secondaryBtn {
+    background: none;
+    border: none;
+}
+
+.servicesImgs {
+    position: relative;
+    width: 44vw;
+    max-width: 36rem;
+    height: 54vh;
+    min-height: 24rem;
+}
+
+.servicesImgs > * {
+    position: absolute;
+}
+
+.serviceUnit1 {
+    top: 16%;
+    left: 16%;
+    z-index: 1;
+}
+.serviceUnit2 {
+    bottom: 16%;
+    right: 16%;
+    z-index: 1;
+}
+
+.servicesImgs svg:nth-of-type(1) {
+    top: -9%;
+    left: 4%;
+}
+.servicesImgs svg:nth-of-type(2) {
+    bottom: 21%;
+    right: 4%;
+}

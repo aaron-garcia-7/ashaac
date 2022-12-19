@@ -1,0 +1,241 @@
+.hero {
+    /* border: 2px solid coral; */
+    width: 100vw;
+    height: 100vh;
+    min-height: 36rem;
+    max-width: 112rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8vw;
+}
+
+.heroText {
+    /* border: 2px dashed yellow; */
+    width: 56vw;
+}
+
+.heroText h1 {
+    font-size: calc(2.8rem + 2.8vw);
+    font-weight: 600;
+}
+
+.heroText h2 {
+    font-size: calc(1.2rem + 1.2vw);
+    font-weight: 900 !important;
+    /* padding: 0 0 4rem 0; */
+    padding-bottom: 4rem;
+}
+
+.heroText h2 em{
+    color: var(--col1);
+}
+
+.imgContainer {
+    /* border: 2px dashed coral; */
+    position: relative;
+    width: 44vw;
+    max-width: 36rem;
+    height: 60vh;
+    min-height: 24rem;
+}
+
+.imgContainer > * {
+    position: absolute;
+}
+
+.imgContainer svg:nth-of-type(1) {
+    top: 0;
+    left: 0;
+}
+.imgContainer svg:nth-of-type(2) {
+    top: 66%;
+    right: 0;
+}
+.unit1 {
+    top: 16%;
+    left: 16%;
+}
+.unit2 {
+    top: 56%;
+    right: 16%;
+}
+.unit3 {
+    bottom: 0;
+    left: 0;
+}
+
+
+.ctaDiv {
+    display: flex;
+}
+
+.ctaDiv button {
+    font-size: calc(0.8rem + 0.8vw);
+    border-radius: 2px;
+}
+
+.cta1 {
+    position: relative;
+    background: none;
+    color: transparent;
+    border: 1px solid var(--col1);
+    padding: 0.3rem 1.2rem;
+    margin-right: 1.2rem;
+}
+.cta1::before {
+    content: "Contact";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    z-index: 1;
+    transition: 0.4s ease 0.16s;
+}
+
+.cta1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: var(--col1);
+    animation: cta1 0.5s cubic-bezier(.78,.13,.15,.86) forwards;
+}
+.cta1:hover {
+    border: 1px solid var(--col1);
+}
+.cta1:hover::before {
+    color: var(--col1);
+    transition: 0.4s ease 0.16s;
+}
+.cta1:hover::after {
+    animation: cta1aft 0.5s cubic-bezier(.78,.13,.15,.86) forwards;
+}
+@keyframes cta1 {
+    0% {
+        left: auto;
+        right: 0;
+        width: 0%;
+    }
+    20% {
+        left: 0;
+        right: auto;
+        width: 0%;
+    }
+    100% {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+}
+@keyframes cta1aft {
+    0% {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+    20% {
+        left: auto;
+        right: 0;
+        width: 100%;
+    }
+    100% {
+        left: auto;
+        right: 0;
+        width: 0%;
+    }
+}
+
+.cta2 {
+    background: none;
+    border: none;
+    padding: 0.4rem 1.2rem;
+    display: flex;
+}
+
+.cta2 div {
+    transition: 0.6s cubic-bezier(.83,-0.72,.15,1.57);
+}
+
+.cta2:hover div {
+    transform: rotate(45deg);
+}
+
+@media (min-width: 1440px) {
+    .heroText h1 {
+        /* border: 2px solid orange; */
+        /* font-size: calc(2.8rem + 2.8vw); */
+        font-size: 6.4rem;
+        /* font-weight: 600; */
+    }
+    
+    .heroText h2 {
+        /* font-size: calc(1.2rem + 1.2vw); */
+        font-size: 2.6rem;
+        /* font-weight: 900 !important; */
+        /* padding: 0 0 4rem 0; */
+        /* padding-bottom: 4rem; */
+    }
+}
+
+@media (max-width: 1440px) {
+    .imgContainer {
+        /* border: 1px solid lightgreen; */
+        width: 36vw;
+        height: 64vh;
+        transform: scale(0.9);
+    }
+    .unit3 {
+        bottom: 6%;
+        left: -12%;
+    }
+}
+
+@media (max-height: 720px) {
+    .heroText {
+        /* border: 2px dashed yellow; */
+        width: 56vw;
+        transform: scale(0.9) translate(-4%, 10%);
+    }
+    .imgContainer {
+        /* border: 1px solid lightgreen; */
+        width: 36vw;
+        height: 90vh;
+        min-height: 32rem;
+        transform: translate(0, 10%) scale(0.8);
+    }
+    .unit2 {
+        top: 52%;
+        /* right: 16%; */
+    }
+    .dots2 {
+        top: 60%;
+        /* right: 0; */
+    }
+}
+
+@media (max-width: 1224px) {
+    .imgContainer {
+        /* border: 1px solid lightgreen; */
+        /* width: 36vw; */
+        /* height: 64vh; */
+        transform: translate(0, 10%) scale(0.7);
+    }
+    .unit2 {
+        top: 56%;
+        right: 0%;
+    }
+    .dots2 {
+        top: 66%;
+        right: -12%;
+    }
+    .unit3 {
+        display: none;
+    }
+}

@@ -1,0 +1,148 @@
+.header {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100vw;
+    max-width: 112rem;
+    padding: 0 8vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    border: 2px solid var(--col1);
+    padding: 1.2rem;
+    border-radius: 50%;
+}
+
+.phone {
+    position: relative;
+    font-size: calc(0.6rem + 0.6vw);
+    transform: translate(2rem, 0);
+    /* to correct nav padding */
+}
+
+.phone::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: var(--dark);
+    transition: 0.3s ease;
+}
+
+.phone::after {
+    content: "Call or text";
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    transition: 0.3s ease 0.08s;
+    transform: translate(0, -100%);
+    opacity: 0;
+}
+
+.phone:hover::before {
+    width: 100%;
+}
+
+.phone:hover::after {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+
+.navLink:nth-of-type(2) {
+    margin-left: 2rem;
+}
+
+.navLink {
+    position: relative;
+    font-size: calc(0.6rem + 0.6vw);
+}
+
+.navLink::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: var(--dark);
+    animation: link 0.4s cubic-bezier(.78,.13,.15,.86) forwards;
+}
+
+.navLink:hover::before {
+    /* width: 100%; */
+    animation: linkHov 0.4s cubic-bezier(.78,.13,.15,.86) forwards;
+}
+
+@keyframes link {
+    0% {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+   20% {
+        left: auto;
+        right: 0;
+        width: 100%;
+    }
+   100% {
+        left: auto;
+        right: 0;
+        width: 0%;
+    }
+}
+@keyframes linkHov {
+    0% {
+        left: auto;
+        right: 0;
+        width: 0%;
+    }
+   20% {
+        left: 0;
+        right: auto;
+        width: 0%;
+    }
+   100% {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+}
+
+.burgerSpacer {
+    display: none;
+}
+
+@media (max-width: 768px){
+    /* .header {
+        border: 1px solid red;
+    } */
+
+    .nav {
+        display: none;
+    }
+
+    .burgerSpacer {
+        display: block;
+        width: 4rem;
+        height: 2rem;
+        /* border: 2px solid red; */
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .phone::before {
+        background: var(--light);
+    }
+    .navLink::before {
+        background: var(--light);
+    }
+}

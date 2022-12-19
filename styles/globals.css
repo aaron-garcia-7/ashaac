@@ -1,9 +1,25 @@
+:root {
+  --light: #fafafa;
+  --dark: #2d2d2d;
+  --col1: #5D9AC5;
+  --col2: #4A5863;
+  --col3: #4D527E;
+  --cool: #0E9BFF;
+  --warm: #D29292;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: var(--light);
 }
 
 a {
@@ -11,8 +27,32 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+button {
+  cursor: pointer;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 900;
+}
+
+img, picture, svg, video {
+  max-width: 100%;
+}
+
+input, textarea, button, select {
+  font: inherit;
+}
+
+.arrow {
+  color: red;
+}
+
+.arrow path {
+  fill: red;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +60,7 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: var(--light);
+    background: var(--dark);
   }
 }

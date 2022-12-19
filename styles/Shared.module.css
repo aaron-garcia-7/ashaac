@@ -1,0 +1,28 @@
+.dots1 path,
+.dots2 path,
+.dots3 path {
+    fill-opacity: 0.2;
+}
+
+.dots1 path {
+    fill: var(--cool);
+}
+.dots2 path {
+    fill: var(--warm);
+}
+.dots3 path {
+    fill: var(--light);
+}
+
+.subText {
+    position: absolute;
+    bottom: 4rem;
+    right: 8rem;
+    width: calc(16rem + 24vw);
+}
+
+.subText path {
+    stroke: var(--light);
+    stroke-width: 0.6;
+    stroke-opacity: 0.2;
+}
