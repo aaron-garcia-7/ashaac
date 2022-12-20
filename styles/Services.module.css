@@ -33,10 +33,13 @@
 
 .btnDiv {
     margin-top: 4rem;
+    display: flex;
+    align-items: center;
 }
 
 .servicesText button {
     font-size: calc(0.8rem + 0.8vw);
+    font-weight: 600;
 }
 
 .arrow {
@@ -50,16 +53,92 @@
 .primaryBtn {
     border-radius: 2px;
     position: relative;
-    background: var(--col3);
-    /* color: transparent; */
-    border: 1px solid var(--col1);
+    background: transparent;
+    color: transparent;
+    border: 1px solid var(--col3);
     padding: 0.3rem 1.2rem;
     margin-right: 1.2rem;
 }
+.primaryBtn::before {
+    content: "Contact";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    z-index: 1;
+    transition: 0.4s ease 0.16s;
+}
+
+.primaryBtn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: var(--col3);
+    animation: primaryBtn 0.5s cubic-bezier(.78,.13,.15,.86) forwards;
+}
+.primaryBtn:hover {
+    border: 1px solid var(--col3);
+}
+.primaryBtn:hover::before {
+    color: var(--light);
+    transition: 0.4s ease 0.16s;
+}
+.primaryBtn:hover::after {
+    animation: primaryBtnaft 0.5s cubic-bezier(.78,.13,.15,.86) forwards;
+}
+@keyframes primaryBtn {
+    0% {
+        left: auto;
+        right: 0;
+        width: 0%;
+    }
+    20% {
+        left: 0;
+        right: auto;
+        width: 0%;
+    }
+    100% {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+}
+@keyframes primaryBtnaft {
+    0% {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+    20% {
+        left: auto;
+        right: 0;
+        width: 100%;
+    }
+    100% {
+        left: auto;
+        right: 0;
+        width: 0%;
+    }
+}
 
 .secondaryBtn {
+    display: flex;
     background: none;
     border: none;
+}
+
+.secondaryBtn div {
+    transition: 0.6s cubic-bezier(.83,-0.72,.15,1.57);
+}
+
+.secondaryBtn:hover div {
+    transform: rotate(45deg);
 }
 
 .servicesImgs {

@@ -10,11 +10,40 @@
     align-items: center;
     z-index: 5;
     transform: scale(1.2);
-    animation: loader 1s ease 2.2s forwards;
+    /* animation: loader 1s ease 2.2s forwards; */
+    animation: loader 1s ease 2.8s forwards;
 }
 
 .title {
+    position: relative;
     font-size: calc(3.2rem + 3.2vw);
+    animation: shift 0.6s ease 2s forwards;
+}
+@keyframes shift {
+    to {
+        transform: translate(12%, 0);
+    }
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    top: 76%;
+    left: 0%;
+    transform: translate(-140%, -50%);
+    background: url(../images/logoAlt.svg);
+    background-size: contain;
+    background-position: center;
+    width: calc(6rem + 2.8vw);
+    height: calc(6rem + 2.8vw);
+    opacity: 0;
+    animation: appear 1s ease 2s forwards;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
 }
 
 .slider h1 {
@@ -31,6 +60,7 @@
     width: calc(16.7rem + 16.7vw);
     height: calc(2rem + 4vw);
     overflow: hidden;
+    animation: shift 0.6s ease 2s forwards;
 }
 
 .slider {

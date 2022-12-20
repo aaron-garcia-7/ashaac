@@ -69,10 +69,12 @@
 
 .ctaDiv {
     display: flex;
+    align-items: center;
 }
 
 .ctaDiv button {
     font-size: calc(0.8rem + 0.8vw);
+    font-weight: 600;
     border-radius: 2px;
 }
 

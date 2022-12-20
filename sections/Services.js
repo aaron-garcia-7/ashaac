@@ -5,7 +5,7 @@ import ServicesText from "../components/subText/ServicesText";
 import unit4 from "../images/unit4.svg";
 import unit7 from "../images/unit7.svg";
 import Dots from "../components/imgComponents/Dots";
-import arrow from "../images/arrow.svg";
+// import arrow from "../images/arrow.svg";
 import Arrow from "../components/imgComponents/Arrow";
 
 const Services = () => {
@@ -27,7 +27,9 @@ const Services = () => {
             <button className={styles.primaryBtn}>Contact</button>
             <button className={styles.secondaryBtn}>
               Free consultation &nbsp;
-              <Arrow col3={true} />
+              <div>
+                <Arrow col3={true} />
+              </div>
             </button>
           </div>
         </div>

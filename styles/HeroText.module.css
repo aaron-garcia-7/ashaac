@@ -49,10 +49,6 @@
     .forText path{
         fill: var(--light);
     }
-    /* .forText svg path{
-        stroke: var(--light);
-        stroke-width: 1;
-    } */
 }
 
 .slider {
