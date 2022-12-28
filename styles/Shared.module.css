@@ -17,12 +17,46 @@
 .subText {
     position: absolute;
     bottom: 4rem;
-    right: 8rem;
-    width: calc(16rem + 24vw);
+    /* right: 8rem; */
+    right: 8vw;
+    /* width: calc(16rem + 24vw); */
+    width: calc(4rem + 36vw);
 }
 
 .subText path {
     stroke: var(--light);
     stroke-width: 0.6;
     stroke-opacity: 0.2;
+}
+
+.star {
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.2rem;
+    margin-right: 0.6rem;
+}
+
+.star svg {
+    display: block !important;
+    fill: var(--dark);
+}
+
+/* The largest/biggest elements will get */
+@media (min-width: 1440px) {
+    .subText {
+        width: 38rem;
+    }
+}
+
+@media (max-width: 1224px) {
+    .star {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .star svg {
+        fill: var(--light);
+    }
 }

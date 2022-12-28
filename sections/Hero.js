@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import Image from "next/image";
 import styles from "../styles/Hero.module.css";
 import unit1 from "../images/unit1.svg";
@@ -22,9 +23,20 @@ const Hero = () => {
           <br /> to your home.
         </h2>
         <div className={styles.ctaDiv}>
-          <button className={styles.cta1}>Contact</button>
+          <button className={styles.cta1}>
+            <Link to="">Contact</Link>
+          </button>
           <button className={styles.cta2}>
-            Services &nbsp;
+            <Link
+              to="services"
+              smooth={"easeInOutQuint"}
+              // offset={50}
+              duration={800}
+              delay={100}
+            >
+              Services
+            </Link>
+            &nbsp;
             <div>
               <Arrow />
             </div>

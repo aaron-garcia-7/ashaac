@@ -10,7 +10,7 @@ import Arrow from "../components/imgComponents/Arrow";
 
 const Services = () => {
   return (
-    <section className={styles.services}>
+    <section className={styles.services} id="services">
       <div className={styles.retainer}>
         <div className={styles.servicesText}>
           <h2>Services</h2>

@@ -5,7 +5,7 @@
   --col2: #4A5863;
   --col3: #4D527E;
   --cool: #0E9BFF;
-  --warm: #D29292;
+  --warm: #D29292; 
 }
 
 *,
@@ -55,12 +55,56 @@ input, textarea, button, select {
   fill: red;
 }
 
+/* SwiperJS styles */
+
+.swiper-pagination {
+  /* border: 2px dashed white; */
+  position: absolute;
+  bottom: -8% !important;
+  /* left: 20%; */
+  width: 12rem;
+  height: 3rem;
+}
+
+/* .swiper-pagination-bullet-active {
+  background-color: #000 !important;
+} */
+
+/* target the active bullet */
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--col1);
+  opacity: 1;
+  transform: scale(1.2);
+  transition: 0.4s ease;
+  /* border: 1px solid white; */
+}
+
+/* target all bullets */
+.swiper-pagination-bullet {
+  border: 0.1rem solid var(--dark);
+  /* border-radius: 2px !important; */
+  padding: 0.24rem !important;
+  transition: 0.4s ease !important;
+  margin: 0 0.4rem !important;
+  background: transparent !important;
+}
+
+
+@media (max-width: 1440px) {
+  .swiper-pagination {
+    bottom: 4% !important;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
   body {
     color: var(--light);
-    background: var(--dark);
+    background: var(--col2);
+  }
+  .swiper-pagination-bullet {
+    border: 0.1rem solid var(--light);
   }
 }
