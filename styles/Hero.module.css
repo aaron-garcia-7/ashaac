@@ -1,4 +1,5 @@
 .hero {
+    /* border: 2px dashed yellow; */
     width: 100vw;
     height: 100vh;
     min-height: 36rem;
@@ -178,11 +179,14 @@
 
 @media (min-width: 1440px) {
     .heroText h1 {
-        font-size: 6.4rem;
+        font-size: 6rem;
     }
     
     .heroText h2 {
-        font-size: 2.6rem;
+        font-size: 2.2rem;
+    }
+    .ctaDiv button {
+        font-size: 1.4rem;
     }
 }
 
@@ -193,8 +197,8 @@
         transform: scale(0.9);
     }
     .unit3 {
-        bottom: 6%;
-        left: -12%;
+        bottom: 0%;
+        left: -2%;
     }
 }
 
@@ -214,6 +218,12 @@
     }
     .imgContainer svg:nth-of-type(2) {
         top: 60%;
+    }
+    .unit3 {
+        /* bottom: 6%; */
+        /* left: 0%; */
+        bottom: 24%;
+        left: -16%;
     }
 }
 
@@ -272,8 +282,8 @@
     }
     
     .imgContainer svg:nth-of-type(1) {
-        top: 0;
-        left: 0;
+        top: 8%;
+        left: 8%;
     }
     .imgContainer svg:nth-of-type(2) {
         /* top: 66%; */
@@ -283,6 +293,7 @@
     .unit1 {
         top: 26%;
         left: 32%;
+        transform: scale(0.7);
     }
     .unit2 {
         display: none;

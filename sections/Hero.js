@@ -19,18 +19,24 @@ const Hero = () => {
         <HeroText />
         <br />
         <h2>
-          Let’s restore <em style={styles.em2}>comfort</em>
+          Let’s restore <em>comfort</em>
           <br /> to your home.
         </h2>
         <div className={styles.ctaDiv}>
           <button className={styles.cta1}>
-            <Link to="">Contact</Link>
+            <Link
+              to="contact"
+              smooth={"easeInOutQuint"}
+              duration={800}
+              delay={100}
+            >
+              Contact
+            </Link>
           </button>
           <button className={styles.cta2}>
             <Link
               to="services"
               smooth={"easeInOutQuint"}
-              // offset={50}
               duration={800}
               delay={100}
             >

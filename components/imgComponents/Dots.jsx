@@ -1,22 +1,25 @@
 import React, {useState, useEffect} from 'react'
 import styles from '../../styles/Shared.module.css';
 
-const Dots = ({color, half}) => {
+const Dots = ({color, half, id}) => {
     // Parallax Effect
     const [offset, setOffset] = useState(0);
     const parallaxScroll = () => {
       setOffset(window.scrollY);
     };
+
     useEffect(() => {
-      window.addEventListener("scroll", parallaxScroll);
+      window.addEventListener("scroll", parallaxScroll);      
       return () => window.removeEventListener("scroll", parallaxScroll);
     }, [offset]);
+
     const parallaxStyle = {
       transform: `translate(0, ${offset * 0.08}px)`,
     };
     // End Parallax
+    
   return (
-    <svg className={color === 'cool' ? styles.dots1 : color === 'warm' ? styles.dots2 : styles.dots3} style={parallaxStyle} width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg id={id ? `${styles.dots}` : ''} className={color === 'cool' ? styles.dots1 : color === 'warm' ? styles.dots2 : styles.dots3} style={parallaxStyle} width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
         {!half && <path d="M75.0281 4.41387C75.0281 1.97616 77.0043 0 79.442 0C81.8797 0 83.8559 1.97616 83.8559 4.41387C83.8559 6.85158 81.8797 8.82774 79.442 8.82774C77.0043 8.82774 75.0281 6.85158 75.0281 4.41387Z"/>}
         {!half && <path d="M93.7429 4.41387C93.7429 1.97616 95.719 0 98.1567 0C100.594 0 102.571 1.97616 102.571 4.41387C102.571 6.85158 100.594 8.82774 98.1567 8.82774C95.719 8.82774 93.7429 6.85158 93.7429 4.41387Z"/>}
         {!half && <path d="M75.0281 23.1285C75.0281 20.6908 77.0043 18.7147 79.442 18.7147C81.8797 18.7147 83.8559 20.6908 83.8559 23.1285C83.8559 25.5662 81.8797 27.5424 79.442 27.5424C77.0043 27.5424 75.0281 25.5662 75.0281 23.1285Z"/>}

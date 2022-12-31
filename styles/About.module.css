@@ -1,4 +1,4 @@
-.services {
+.about {
     background: var(--col1);
     width: 100vw;
     height: 100vh;
@@ -6,7 +6,6 @@
 }
 
 .retainer {
-    /* border: 2px dashed yellow; */
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -19,18 +18,18 @@
     padding: 0 8vw;
 }
 
-.servicesText {
+.aboutText {
     color: var(--light);
     width: calc(21rem + 12vw);
     font-size: calc(0.7rem + 0.7vw);
 }
 
-.servicesText h2 {
+.aboutText h2 {
     font-size: calc(2.8rem + 2.8vw);
     margin-bottom: 2rem;
 }
 
-.servicesText p {
+.aboutText p {
     margin-bottom: 2rem;
 }
 
@@ -40,7 +39,7 @@
     align-items: center;
 }
 
-.servicesText button {
+.aboutText button {
     font-size: calc(0.8rem + 0.8vw);
     font-weight: 600;
 }
@@ -60,7 +59,7 @@
     color: transparent;
     border: 1px solid var(--col3);
     padding: 0.3rem 1.2rem;
-    margin-right: 2rem;
+    margin-right: 1.2rem;
 }
 .primaryBtn::before {
     content: "Contact";
@@ -145,7 +144,8 @@
     transform: rotate(45deg);
 }
 
-.servicesImgs {
+.aboutImgs {
+    /* border: 2px dashed lightgoldenrodyellow; */
     position: relative;
     width: 48vw;
     max-width: 42rem;
@@ -153,99 +153,121 @@
     min-height: 24rem;
 }
 
-.servicesImgs > * {
+.aboutImgs > * {
     position: absolute;
 }
 
-.serviceUnit1 {
-    top: 16%;
-    left: 16%;
+.aboutUnit1 {
+    top: 6%;
+    right: 24%;
     z-index: 1;
 }
-.serviceUnit2 {
-    bottom: 16%;
-    right: 16%;
+.aboutUnit2 {
+    bottom: 20%;
+    left: 24%;
     z-index: 1;
 }
 
-.servicesImgs svg:nth-of-type(1) {
-    top: -9%;
-    left: 4%;
+.aboutImgs svg:nth-of-type(1) {
+    top: -41%;
+    right: 13%;
 }
-.servicesImgs svg:nth-of-type(2) {
-    bottom: 21%;
-    right: 4%;
+.aboutImgs svg:nth-of-type(2) {
+    bottom: 47%;
+    left: 13%;
 }
 
 @media (min-width: 1440px) {
-    .servicesText h2 {
+    .aboutText h2 {
         font-size: 6rem;
     }
-    .servicesText p {
+    .aboutText p {
         font-size: 1.4rem;
     }
-    .servicesText button {
+    .aboutText button {
         font-size: 1.4rem;
     }
 }
 
 @media (max-width: 1440px) {
-    .servicesImgs {
+    .aboutImgs {
         transform: scale(0.9);
     }
-    .serviceUnit1 {
-        top: 8%;
+    .aboutUnit1 {
+        top: 0%;
+        right: 20%;
+    }
+    .aboutUnit2 {
+        /* bottom: 20%; */
         left: 28%;
     }
-    .servicesImgs svg:nth-of-type(1) {
-        top: -20%;
+    
+    .aboutImgs svg:nth-of-type(1) {
+        top: -52%;
+        right: 9%;
+    }
+    .aboutImgs svg:nth-of-type(2) {
+        bottom: 68%;
         left: 17%;
     }
 }
 
 @media (max-height: 720px) {
-    .servicesText {
+    .aboutText {
         transform: scale(0.9) translate(-4%, 0);
     }
-    .servicesImgs {
+    .aboutImgs {
         transform: translate(0, -10%) scale(0.8);
     }
-    .imgContainer svg:nth-of-type(2) {
-        top: 60%;
+    .aboutUnit1 {
+        top: 10%;
+        right: 12%;
+    }
+    .aboutUnit2 {
+        bottom: 12%;
+        /* left: 28%; */
+    }
+    .aboutImgs svg:nth-of-type(1) {
+        top: -45%;
+        right: 1%;
+    }
+    .aboutImgs svg:nth-of-type(2) {
+        bottom: 62%;
+        /* left: 17%; */
     }
 }
 
 @media (max-width: 1224px) {
-    .servicesText {
+    .aboutText {
         width: calc(24rem + 12vw);
     }
-    .servicesImgs {
+    .aboutImgs {
         transform: translate(0, -10%) scale(1);
     }
-    .serviceUnit1 {
+    .aboutUnit2 {
         top: 36%;
-        left: 36%;
+        left: 40%;
     }
-    .serviceUnit2 {
+    .aboutImgs svg:nth-of-type(2) {
+        top: 16%;
+        left: 26%;
+    }
+    .aboutUnit1 {
         display: none;
     }
-    .servicesImgs svg:nth-of-type(1) {
-        top: 6%;
-        left: 20%;
-    }
-    .servicesImgs svg:nth-of-type(2) {
+    .aboutImgs svg:nth-of-type(1) {
         display: none;
     }
 }
 
 @media (max-width: 1224px) {
-    .servicesImgs {
+    .aboutImgs {
         transform: translate(0, -10%) scale(0.8);
     }
 }
 
 @media (max-width: 768px) {
-    .servicesImgs {
+    .aboutImgs {
         transform: translate(0, 0%) scale(0.8);
     }
 
@@ -259,33 +281,22 @@
 }
 
 @media (max-width: 520px) {
-    .servicesText {
+    .aboutText {
         transform: scale(1) translate(0%, 0);
         width: calc(21rem + 12vw);
     }
-    .servicesImgs {
+    .aboutImgs {
         position: absolute;
         top: 0;
         right: 0;
         transform: scale(0.4);
     } 
-    .serviceUnit1 {
-        top: 36%;
+    .aboutUnit2 {
+        top: 44%;
         left: 12%;
     }
-    .servicesImgs svg:nth-of-type(1) {
-        top: 4%;
+    .aboutImgs svg:nth-of-type(2) {
+        top: -11%;
         left: -18%;
-    }
-}
-
-@media (max-width: 480px) {
-    .serviceUnit1 {
-        top: 46%;
-        left: 24%;
-    }
-    .servicesImgs svg:nth-of-type(1) {
-        top: 12%;
-        left: -13%;
     }
 }

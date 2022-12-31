@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
-// import star from "../images/star.svg";
 import Dots from "../components/imgComponents/Dots";
 import Star from "../components/imgComponents/Star";
 import styles from "../styles/Testimonials.module.css";
@@ -60,11 +58,6 @@ const Testimonials = () => {
                   <Star />
                   <Star />
                   <Star />
-                  {/* <Image src={star} alt="review star" className={styles.star} /> */}
-                  {/* <Image src={star} alt="review star" className={styles.star} /> */}
-                  {/* <Image src={star} alt="review star" className={styles.star} /> */}
-                  {/* <Image src={star} alt="review star" className={styles.star} /> */}
-                  {/* <Image src={star} alt="review star" className={styles.star} /> */}
                 </div>
               )}
               {obj.stars === 4 && (
@@ -73,10 +66,6 @@ const Testimonials = () => {
                   <Star />
                   <Star />
                   <Star />
-                  {/* <Image src={star} alt="review star" className={styles.star} /> */}
-                  {/* <Image src={star} alt="review star" className={styles.star} /> */}
-                  {/* <Image src={star} alt="review star" className={styles.star} /> */}
-                  {/* <Image src={star} alt="review star" className={styles.star} /> */}
                 </div>
               )}
             </div>

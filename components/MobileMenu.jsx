@@ -14,7 +14,7 @@ const MobileMenu = ({menu, setMenu}) => {
       <ul className={styles.linkList}>
             <li>
               <Link className={styles.navLink}
-                to=""
+                to="contact"
                 smooth={'easeInOutQuint'}
                 // offset={50}
                 duration={800}
@@ -38,7 +38,7 @@ const MobileMenu = ({menu, setMenu}) => {
             </li>
             <li>
               <Link className={styles.navLink}
-                to=""
+                to="about"
                 smooth={'easeInOutQuint'}
                 // offset={50}
                 duration={800}
@@ -50,7 +50,7 @@ const MobileMenu = ({menu, setMenu}) => {
             </li>
             <li>
               <Link className={styles.navLink}
-                to=""
+                to="FAQ"
                 smooth={'easeInOutQuint'}
                 // offset={50}
                 duration={800}

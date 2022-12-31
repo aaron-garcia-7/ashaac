@@ -1,23 +1,46 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
+// import { useInView } from "react-intersection-observer";
+
 import Loading from "../components/Loading";
 import MobileMenu from "../components/MobileMenu";
 import Nav from "../components/Nav";
-import Hero from "../sections/Hero";
 import Burger from "../components/Burger";
+import ToTop from "../components/ToTop";
+
+import Hero from "../sections/Hero";
 import Services from "../sections/Services";
 import Testimonials from "../sections/Testimonials";
-// import Image from "next/image";
-// import styles from "../styles/Home.module.css";
+import About from "../sections/About";
+import FAQ from "../sections/FAQ";
+import Contact from "../sections/Contact";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const [menu, setMenu] = useState(false);
+  const [fromTop, setFromTop] = useState(false);
+
+  // const [ref, inView] = useInView({
+  //   threshold: 0.5,
+  //   triggerOnce: false,
+  // });
 
   useEffect(() => {
     const closeMenu = () => window.innerWidth > 768 && setMenu(false);
     window.addEventListener("resize", closeMenu);
 
-    return () => window.removeEventListener("resize", closeMenu);
+    let checkTopDistance = () => {
+      if (window) {
+        window.scrollY > 560 ? setFromTop(true) : setFromTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", checkTopDistance);
+
+    return () => {
+      window.removeEventListener("resize", closeMenu);
+      window.removeEventListener("scroll", checkTopDistance);
+    };
   }, []);
 
   return (
@@ -30,14 +53,19 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main id="top">
         <Loading />
         <Nav />
         <Burger menu={menu} setMenu={setMenu} />
         <MobileMenu menu={menu} setMenu={setMenu} />
+        <ToTop fromTop={fromTop} />
         <Hero />
         <Services />
         <Testimonials />
+        <About />
+        <FAQ />
+        <Contact />
+        <Footer />
       </main>
     </div>
   );

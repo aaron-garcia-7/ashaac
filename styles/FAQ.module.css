@@ -1,0 +1,319 @@
+.FAQ {
+    /* border: 1px dashed yellow; */
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+    min-height: 24rem;
+    max-width: 112rem;
+    margin: auto;
+    padding: 0 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FAQ > * {
+    /* border: 1px dashed lightgreen; */
+    /* width: 50%; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.FAQText {
+    width: 58%;
+}
+
+.FAQText h2 {
+    font-size: calc(2.2rem + 2.2vw);
+    margin-bottom: 1rem;
+}
+.FAQText p {
+    font-size: calc(0.7rem + 0.7vw);
+    margin-bottom: 3.2rem;
+}
+
+.FAQBox {
+    position: relative;
+    width: 42%;
+    /* height: 12rem; */
+    height: calc(10rem + 4vw);
+    font-size: 1rem;
+    overflow-y: scroll;
+    justify-content: flex-start;
+}
+
+.scrollDown {
+    position: absolute;
+    top: 18%;
+    left: 56.6%;
+    width: auto;
+    height: auto;
+    font-size: calc(0.7rem + 0.2vw);
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+.FAQBox:hover + .scrollDown {
+    animation: flash 1.6s ease infinite alternate 2s;
+}
+
+@keyframes flash {
+    to {
+        opacity: 0.7;
+    }
+}
+
+.FAQBlock {
+    width: 80%;
+    height: 3.4rem !important;
+    cursor: pointer;
+    margin: 0.6rem 0;
+    transition: 0.4s ease;
+}
+.FAQQuestion {
+    position: relative;
+    font-size: calc(1rem + 0.2vw);
+    padding: 0.6rem 0;
+    margin-bottom: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+.FAQQuestion::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--col1);
+    animation: FAQBlock 0.5s cubic-bezier(.78,.13,.15,.86) forwards;
+}
+.FAQQuestion svg {
+    transition: 0.8s cubic-bezier(.83,-0.72,.15,1.57);
+}
+
+.FAQBlock p {
+    font-size: calc(0.8rem + 0.2vw);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+
+.FAQBlockActive {
+    height: 8rem !important;
+}
+.FAQBlockActive .FAQQuestion::after {
+    animation: FAQBlockAft 0.5s cubic-bezier(.78,.13,.15,.86) forwards;
+}
+.FAQBlockActive .FAQQuestion svg {
+    transform: rotate(90deg);
+    transform: rotate(180deg);
+}
+.FAQBlockActive p {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.FAQBtn {
+    font-size: calc(0.8rem + 0.8vw);
+    font-weight: 600;
+    border-radius: 2px;
+    position: relative;
+    background: none;
+    color: transparent;
+    border: 1px solid var(--col1);
+    padding: 0.3rem 1.2rem;
+    margin-right: 1.2rem;
+    cursor: pointer;
+}
+.FAQBtn::before {
+    content: "Contact";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    z-index: 1;
+    transition: 0.4s ease 0.16s;
+}
+
+.FAQBtn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: var(--col1);
+    animation: FAQBtn 0.5s cubic-bezier(.78,.13,.15,.86) forwards;
+}
+.FAQBtn:hover {
+    border: 1px solid var(--col1);
+}
+.FAQBtn:hover::before {
+    color: var(--col1);
+    transition: 0.4s ease 0.16s;
+}
+.FAQBtn:hover::after {
+    animation: FAQBtnaft 0.5s cubic-bezier(.78,.13,.15,.86) forwards;
+}
+@keyframes FAQBtn {
+    0% {
+        left: auto;
+        right: 0;
+        width: 0%;
+    }
+    20% {
+        left: 0;
+        right: auto;
+        width: 0%;
+    }
+    100% {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+}
+@keyframes FAQBtnaft {
+    0% {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+    20% {
+        left: auto;
+        right: 0;
+        width: 100%;
+    }
+    100% {
+        left: auto;
+        right: 0;
+        width: 0%;
+    }
+}
+
+@keyframes FAQBlock {
+    0% {
+        left: auto;
+        right: 0;
+        width: 0%;
+    }
+    20% {
+        left: 0;
+        right: auto;
+        width: 0%;
+    }
+    100% {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+}
+@keyframes FAQBlockAft {
+    0% {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+    20% {
+        left: auto;
+        right: 0;
+        width: 100%;
+    }
+    100% {
+        left: auto;
+        right: 0;
+        width: 0%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .FAQText h2 {
+        font-size: 5.2rem;
+    }
+    .FAQText p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 1440px) {
+    .FAQText h2 {
+        font-size: calc(2.4rem + 2.4vw);
+    }
+    .FAQText p {
+        font-size: calc(0.7rem + 0.7vw);
+    }
+    .scrollDown {
+        top: 14%;
+        left: 56.7%;
+    }
+}
+
+@media (max-width: 1224px) {
+    .FAQText {
+        width: 56%;
+    }
+    .FAQBox {
+        width: 44%;
+    }
+    .FAQBlock {
+        width: 92%;
+    }
+    .FAQBlockActive {
+        height: 10rem !important;
+    }
+    .scrollDown {
+        top: 14%;
+        left: 55%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .FAQ {
+        padding: 0 6vw;
+    }
+
+    .FAQText {
+        display: none;
+    }
+    .FAQBox {
+        padding: 0 1.6rem;
+        width: 100%;
+        height: calc(13rem + 1vw);
+    }
+    
+    .FAQBlock {
+        width: 100%;
+    }
+    .FAQQuestion {
+        position: relative;
+        padding: 0.6rem 0;
+        margin-bottom: 0.6rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .FAQBlockActive {
+        height: 16rem !important;
+    }
+    .scrollDown {
+        top: 14%;
+        left: calc(2rem + 5vw);
+    }
+}
+
+@media (max-width: 520px) {
+    .FAQ {
+        padding: 0 3vw;
+    }
+    .FAQQuestion {
+        font-size: calc(0.9rem + 0.2vw);
+    }
+    .scrollDown {
+        left: calc(1rem + 4.8vw);
+    }
+}

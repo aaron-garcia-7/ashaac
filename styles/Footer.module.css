@@ -1,0 +1,12 @@
+.footer {
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+    min-height: 24rem;
+    max-width: 112rem;
+    margin: auto;
+    padding: 0 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

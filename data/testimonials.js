@@ -28,7 +28,7 @@ const testimonials = [
   {
     name: "Ceridwen",
     review:
-      "Great service. They changed the thermostats and blower to get my AC back up and running the same day! I appreciated that they took the time to see what the problem was...",
+      "Great service. They changed the thermostats and blower to get my AC back up and running the same day! I appreciated that they took the time to fix the problem...",
     fullReview:
       "Great service. They changed the thermostats and blower to get my AC back up and running the same day! I appreciated that they took the time to see what the problem was and saved me a ton of money, by fixing my existing AC, instead of having to get a whole new system.",
     stars: 5,

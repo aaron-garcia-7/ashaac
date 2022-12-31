@@ -9,7 +9,6 @@
 }
 
 .swiperTool {
-    /* border: 1px dashed grey; */
     width: 79vw;
     max-width: 96rem;
     height: 16rem;
@@ -40,32 +39,18 @@
     font-size: 2rem;
 }
 
-/* .quoteMark {
-    font-size: 2rem;
-} */
-
 .swiperTool h4 {
     font-size: calc(0.6rem + 0.8vw);
     margin-right: 1.2rem;
     font-style: italic;
 }
 .bottom {
-    /* border: 2px dashed grey; */
     display: flex;
     align-items: center;
-    /* padding-left: 2rem; */
 }
 .stars {
     display: flex;
-    /* border: 1px solid yellow; */
-    /* width: auto; */
 }
-/* .star {
-    width: 1rem;
-    height: 1rem;
-    margin-top: 0.6rem;
-    margin-right: 0.2rem;
-} */
 
 .testimonials svg {
     position: absolute;
@@ -73,14 +58,20 @@
 
 .testimonials svg:nth-of-type(1) {
     display: none;
-    /* position: absolute; */
-    /* top: -20%; */
-    /* left: 4vw; */
 }
 .testimonials svg:nth-of-type(2) {
     position: absolute;
     top: 40%;
     right: 4vw;
+}
+
+@media (min-width: 2024px) {
+    .swiperTool {
+        width: 84rem;
+    }
+    .swiperTool blockquote {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 1440px) {
@@ -116,21 +107,22 @@
 
 @media (max-width: 768px) {
     .swiperTool blockquote {
-        /* position: relative; */
         font-size: calc(0.8rem + 0.8vw);
         margin-bottom: 2rem;
     }
     
     .swiperTool h4 {
-        font-size: calc(1.4rem + 1.4vw);
+        font-size: calc(1rem + 1vw);
         margin-right: 1.2rem;
         font-style: italic;
+    }
+    .bottom {
+        align-self: center;
     }
     .star {
         width: 1.4rem;
         height: 1.4rem;
-        margin-top: 0.4rem;
-        /* margin-right: 0.2rem; */
+        margin-top: 0;
     }
     .testimonials svg:nth-of-type(2) {
         display: block;

@@ -1,0 +1,6 @@
+.contact {
+    background: var(--col1);
+    width: 100vw;
+    height: 100vh;
+    min-height: 36rem;
+}

@@ -41,7 +41,9 @@
     bottom: -100%;
     left: 0;
     width: 100%;
-    transition: 0.3s ease 0.08s;
+    font-size: calc(0.5rem + 0.5vw);
+    /* transition: 0.3s ease 0.08s; */
+    transition: 0.3s ease 0.3s;
     transform: translate(0, -100%);
     opacity: 0;
 }
@@ -64,6 +66,7 @@
     position: relative;
     font-size: calc(0.6rem + 0.6vw);
     padding: 0.1rem 0;
+    cursor: pointer;
 }
 
 .navLink::before {

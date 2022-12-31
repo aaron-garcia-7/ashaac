@@ -1,0 +1,33 @@
+.toTop {
+    background: var(--light);
+    position: fixed;
+    bottom: 2.8vw;
+    right: 2.8vw;
+    width: calc(2rem + 1vw);
+    height: calc(2rem + 1vw);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(0, 50%);
+    transition: 0.5s ease;
+}
+
+.toTop:hover {
+    transform: scale(1.1) !important;
+}
+
+.toTop img {
+    transform: rotate(-45deg) scale(0.6);
+}
+
+@media (max-width: 520px){
+    .toTop {
+        bottom: 6.4vw;
+        right: 6.4vw;
+    }
+}
