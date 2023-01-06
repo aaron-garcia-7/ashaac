@@ -50,11 +50,14 @@
 .slider h1 {
     color: var(--light);
     font-size: calc(2.2rem + 2.2vw);
+    font-weight: 300;
+
 }
 
 .slider h2 {
     color: var(--light);
     font-size: calc(0.8rem + 1.2vw);
+    font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
 }

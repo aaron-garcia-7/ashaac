@@ -16,12 +16,12 @@
 
 .heroText h1 {
     font-size: calc(2.8rem + 2.8vw);
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .heroText h2 {
     font-size: calc(1.2rem + 1.2vw);
-    font-weight: 900 !important;
+    font-weight: 400;
     padding-bottom: 4rem;
 }
 
@@ -70,7 +70,7 @@
 
 .ctaDiv button {
     font-size: calc(0.8rem + 0.8vw);
-    font-weight: 600;
+    font-weight: 400;
     border-radius: 2px;
 }
 

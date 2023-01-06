@@ -21,6 +21,8 @@ html,
 body {
     background: var(--col2);
     color: var(--light);
+    /* font-weight: 400; */
+    font-family: 'Satoshi', sans-serif;
 }
 
 a {
@@ -30,10 +32,6 @@ a {
 
 button {
   cursor: pointer;
-}
-
-strong {
-  font-weight: 900;
 }
 
 img, picture, svg, video {
