@@ -343,3 +343,33 @@
         display: none;
     }
 }
+
+@media (max-width: 540px) {
+    .contact {
+        height: 64rem;
+    }
+    .retainer {
+        transform: translate(0, -10%);
+    }
+    .leftSide {
+        margin-bottom: 1rem;
+    }
+    .rightSide {
+        flex-direction: column;
+    }
+    .altContact {
+        margin-bottom: calc(1rem + 2vw);
+    }
+    
+    .altContact h5 {
+        margin-bottom: 0.4rem;
+    }
+}
+@media (max-width: 480px) {
+    .retainer {
+        transform: translate(0, 0);
+    }
+    .leftSide {
+        margin-bottom: 2rem;
+    }
+}

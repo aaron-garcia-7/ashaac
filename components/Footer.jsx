@@ -12,9 +12,6 @@ const Footer = ({theme, setTheme}) => {
         <p>© 2023</p>
       </div>
       <div className={styles.rightSide}>
-        <div className={styles.themeDiv} onClick={() => setTheme((prev => prev === 'dark' ? 'light' : 'dark'))}>
-        <p>Theme Setting: <span>{theme === 'dark' ? 'Dark' : 'Light'}</span></p>
-        </div>
         <a href="https://aarongarciacreative.com/" target="_blank" rel="noreferrer" className={styles.credits}>Website made with <Heart /> by Aaron Garcia</a>
       </div>
     </footer>
