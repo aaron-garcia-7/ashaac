@@ -41,7 +41,7 @@
 }
 .star svg {
     display: block !important;
-    fill: var(--dark);
+    fill: var(--light);
 }
 
 #dots {
@@ -90,11 +90,5 @@
 @media (max-width: 480px) {
     .strokeText {
         bottom: 4rem;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .star svg {
-        fill: var(--light);
     }
 }

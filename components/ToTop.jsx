@@ -10,6 +10,7 @@ const ToTop = ({fromTop}) => {
         opacity: 1,
         pointerEvents: 'all',
         transform: 'translate(0, 0)',
+        transitionDelay: '1s',
     }
 
   return (

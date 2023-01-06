@@ -4,16 +4,14 @@
     width: 100vw;
     height: 100vh;
     padding: 0.64rem 8vw;
-    background: var(--light);
+    background: var(--col2);
     z-index: 3;
     transition: opacity 0.3s ease;
 }
 
 .logoDiv {
-    /* border: 2px dashed lightgoldenrodyellow; */
     width: 11.6rem;
     margin-bottom: calc(7rem + 2vw);
-    /* height: 4rem; */
 }
 
 .linkList {
@@ -60,7 +58,7 @@
     left: 0;
     width: 0%;
     height: 2px;
-    background: var(--dark);
+    background: var(--light);
     animation: link 0.4s cubic-bezier(.78,.13,.15,.86) forwards;
 }
 
@@ -110,7 +108,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     .menu {
         background: var(--col2);
     }
@@ -118,4 +116,4 @@
     .altMethods a::before {
         background: var(--light);
     }
-}
+} */

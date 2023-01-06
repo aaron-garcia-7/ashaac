@@ -35,90 +35,8 @@
     margin-bottom: 3.2rem;
 }
 
-.FAQBox {
-    position: relative;
-    width: 42%;
-    /* height: 12rem; */
-    height: calc(10rem + 4vw);
-    font-size: 1rem;
-    overflow-y: scroll;
-    justify-content: flex-start;
-}
-
-.scrollDown {
-    position: absolute;
-    top: 18%;
-    left: 56.6%;
-    width: auto;
-    height: auto;
-    font-size: calc(0.7rem + 0.2vw);
-    text-transform: uppercase;
-    opacity: 0;
-}
-
-.FAQBox:hover + .scrollDown {
-    animation: flash 1.6s ease infinite alternate 2s;
-}
-
-@keyframes flash {
-    to {
-        opacity: 0.7;
-    }
-}
-
-.FAQBlock {
-    width: 80%;
-    height: 3.4rem !important;
-    cursor: pointer;
-    margin: 0.6rem 0;
-    transition: 0.4s ease;
-}
-.FAQQuestion {
-    position: relative;
-    font-size: calc(1rem + 0.2vw);
-    padding: 0.6rem 0;
-    margin-bottom: 0.6rem;
-    display: flex;
-    justify-content: space-between;
-}
-.FAQQuestion::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--col1);
-    animation: FAQBlock 0.5s cubic-bezier(.78,.13,.15,.86) forwards;
-}
-.FAQQuestion svg {
-    transition: 0.8s cubic-bezier(.83,-0.72,.15,1.57);
-}
-
-.FAQBlock p {
-    font-size: calc(0.8rem + 0.2vw);
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.5s ease;
-}
-
-.FAQBlockActive {
-    height: 8rem !important;
-}
-.FAQBlockActive .FAQQuestion::after {
-    animation: FAQBlockAft 0.5s cubic-bezier(.78,.13,.15,.86) forwards;
-}
-.FAQBlockActive .FAQQuestion svg {
-    transform: rotate(90deg);
-    transform: rotate(180deg);
-}
-.FAQBlockActive p {
-    opacity: 1;
-    pointer-events: all;
-}
-
 .FAQBtn {
-    font-size: calc(0.8rem + 0.8vw);
+    font-size: calc(0.7rem + 0.6vw);
     font-weight: 600;
     border-radius: 2px;
     position: relative;
@@ -195,6 +113,89 @@
         right: 0;
         width: 0%;
     }
+}
+
+
+.FAQBox {
+    position: relative;
+    width: 42%;
+    /* height: 12rem; */
+    height: calc(10rem + 4vw);
+    font-size: 1rem;
+    overflow-y: scroll;
+    justify-content: flex-start;
+}
+
+.scrollDown {
+    position: absolute;
+    top: 18%;
+    left: 56.6%;
+    width: auto;
+    height: auto;
+    font-size: calc(0.7rem + 0.2vw);
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+.FAQBox:hover + .scrollDown {
+    animation: flash 1.6s ease infinite alternate 1s;
+}
+
+@keyframes flash {
+    to {
+        opacity: 0.7;
+    }
+}
+
+.FAQBlock {
+    width: 80%;
+    height: 3.4rem !important;
+    cursor: pointer;
+    margin: 0.6rem 0;
+    transition: 0.4s ease;
+}
+.FAQQuestion {
+    position: relative;
+    font-size: calc(1rem + 0.2vw);
+    padding: 0.6rem 0;
+    margin-bottom: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+.FAQQuestion::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--col1);
+    animation: FAQBlock 0.5s cubic-bezier(.78,.13,.15,.86) forwards;
+}
+.FAQQuestion svg {
+    transition: 0.8s cubic-bezier(.83,-0.72,.15,1.57);
+}
+
+.FAQBlock p {
+    font-size: calc(0.8rem + 0.2vw);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+
+.FAQBlockActive {
+    height: 8rem !important;
+}
+.FAQBlockActive .FAQQuestion::after {
+    animation: FAQBlockAft 0.5s cubic-bezier(.78,.13,.15,.86) forwards;
+}
+.FAQBlockActive .FAQQuestion svg {
+    transform: rotate(90deg);
+    transform: rotate(180deg);
+}
+.FAQBlockActive p {
+    opacity: 1;
+    pointer-events: all;
 }
 
 @keyframes FAQBlock {

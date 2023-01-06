@@ -19,7 +19,8 @@
 
 html,
 body {
-    background: var(--light);
+    background: var(--col2);
+    color: var(--light);
 }
 
 a {
@@ -31,10 +32,6 @@ button {
   cursor: pointer;
 }
 
-/* em {
-  font-style: italic;
-} */
-
 strong {
   font-weight: 900;
 }
@@ -45,14 +42,6 @@ img, picture, svg, video {
 
 input, textarea, button, select {
   font: inherit;
-}
-
-.arrow {
-  color: red;
-}
-
-.arrow path {
-  fill: red;
 }
 
 /* SwiperJS styles */
@@ -81,7 +70,7 @@ input, textarea, button, select {
 
 /* target all bullets */
 .swiper-pagination-bullet {
-  border: 0.1rem solid var(--dark);
+  border: 0.1rem solid var(--light);
   /* border-radius: 2px !important; */
   padding: 0.24rem !important;
   transition: 0.4s ease !important;
@@ -99,18 +88,5 @@ input, textarea, button, select {
 @media (max-width: 768px) {
   .swiper-pagination-bullet {
     margin: 0 0.3rem !important;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: var(--light);
-    background: var(--col2);
-  }
-  .swiper-pagination-bullet {
-    border: 0.1rem solid var(--light);
   }
 }

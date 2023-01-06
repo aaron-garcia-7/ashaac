@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Link } from "react-scroll";
 import styles from "../styles/Services.module.css";
 import StrokeText1 from "../components/subText/StrokeText1";
 import unit4 from "../images/unit4.svg";
@@ -23,7 +24,16 @@ const Services = () => {
             on request. Contact us to find out.
           </p>
           <div className={styles.btnDiv}>
-            <button className={styles.primaryBtn}>Contact</button>
+            <button className={styles.primaryBtn}>
+              <Link
+                to="contact"
+                smooth={"easeInOutQuint"}
+                duration={800}
+                delay={100}
+              >
+                Contact
+              </Link>
+            </button>
             <button className={styles.secondaryBtn}>
               Free consultation &nbsp;
               <div>

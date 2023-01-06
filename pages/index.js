@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
-// import { useInView } from "react-intersection-observer";
 
 import Loading from "../components/Loading";
 import MobileMenu from "../components/MobileMenu";
@@ -19,11 +18,21 @@ import Footer from "../components/Footer";
 export default function Home() {
   const [menu, setMenu] = useState(false);
   const [fromTop, setFromTop] = useState(false);
+  const [theme, setTheme] = useState("dark");
 
-  // const [ref, inView] = useInView({
-  //   threshold: 0.5,
-  //   triggerOnce: false,
-  // });
+  // useEffect(() => {
+  //   let isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  //   isDark ? setTheme("dark") : setTheme("light");
+  //   window
+  //     .matchMedia("(prefers-color-scheme: dark)")
+  //     .addEventListener("change", (e) => {
+  //       if (e.matches) {
+  //         setTheme("dark");
+  //       } else {
+  //         setTheme("light");
+  //       }
+  //     });
+  // }, []);
 
   useEffect(() => {
     const closeMenu = () => window.innerWidth > 768 && setMenu(false);
@@ -65,7 +74,7 @@ export default function Home() {
         <About />
         <FAQ />
         <Contact />
-        <Footer />
+        <Footer theme={theme} setTheme={setTheme} />
       </main>
     </div>
   );

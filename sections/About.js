@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Link } from "react-scroll";
 import styles from "../styles/About.module.css";
 import StrokeText2 from "../components/subText/StrokeText2";
 import unit5 from "../images/unit5.svg";
@@ -23,7 +24,16 @@ const About = () => {
             strongly believe in treating your home with respect and care.
           </p>
           <div className={styles.btnDiv}>
-            <button className={styles.primaryBtn}>Contact</button>
+            <button className={styles.primaryBtn}>
+              <Link
+                to="contact"
+                smooth={"easeInOutQuint"}
+                duration={800}
+                delay={100}
+              >
+                Contact
+              </Link>
+            </button>
             <button className={styles.secondaryBtn}>
               Free consultation &nbsp;
               <div>

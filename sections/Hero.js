@@ -6,7 +6,6 @@ import unit1 from "../images/unit1.svg";
 import unit2 from "../images/unit2.svg";
 import unit3 from "../images/unit3.svg";
 import HeroText from "../components/HeroText";
-// import Text5 from "../components/heroText/text5";
 import Dots from "../components/imgComponents/Dots";
 import Arrow from "../components/imgComponents/Arrow";
 
@@ -15,7 +14,6 @@ const Hero = () => {
     <section className={styles.hero}>
       <div className={styles.heroText}>
         <h1>All Solutions</h1>
-        {/* <Text5 /> */}
         <HeroText />
         <br />
         <h2>

@@ -44,14 +44,6 @@
     font-weight: 600;
 }
 
-.arrow {
-    border: 2px dashed orange;
-}
-
-.arrow {
-    fill: blue !important;
-}
-
 .primaryBtn {
     border-radius: 2px;
     position: relative;
@@ -73,6 +65,7 @@
     align-items: center;
     color: var(--light);
     z-index: 1;
+    pointer-events: none;
     transition: 0.4s ease 0.16s;
 }
 
@@ -82,6 +75,7 @@
     top: 0;
     height: 100%;
     background: var(--col3);
+    pointer-events: none;
     animation: primaryBtn 0.5s cubic-bezier(.78,.13,.15,.86) forwards;
 }
 .primaryBtn:hover {

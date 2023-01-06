@@ -11,8 +11,6 @@
 .textSvg {
     margin-bottom: 2rem;
     width: auto;
-    /* background: transparent; */
-    /* padding: 0 0.2rem; */
 }
 
 .textSvg:nth-of-type(1),
@@ -41,14 +39,7 @@
 
 .textSvg path,
 .forText path{
-    fill: var(--dark);
-}
-
-@media (prefers-color-scheme: dark) {
-    .textSvg path,
-    .forText path{
-        fill: var(--light);
-    }
+    fill: var(--light);
 }
 
 .slider {

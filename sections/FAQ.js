@@ -24,7 +24,7 @@ const FAQ = () => {
         </p>
         <Link
           className={styles.FAQBtn}
-          to="top"
+          to="contact"
           smooth={"easeInOutQuint"}
           duration={800}
           delay={100}

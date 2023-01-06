@@ -1,5 +1,4 @@
 .hero {
-    /* border: 2px dashed yellow; */
     width: 100vw;
     height: 100vh;
     min-height: 36rem;
@@ -96,6 +95,7 @@
     color: var(--light);
     z-index: 1;
     transition: 0.4s ease 0.16s;
+    pointer-events: none;
 }
 
 .cta1::after {
@@ -105,6 +105,7 @@
     height: 100%;
     background: var(--col1);
     animation: cta1 0.5s cubic-bezier(.78,.13,.15,.86) forwards;
+    pointer-events: none;
 }
 .cta1:hover {
     border: 1px solid var(--col1);
@@ -152,7 +153,7 @@
 }
 
 .cta2 {
-    color: var(--col2);
+    color: var(--light);
     background: none;
     border: none;
     padding: 0.4rem 1.2rem;
@@ -169,12 +170,6 @@
 
 .cta2:hover div {
     transform: rotate(45deg);
-}
-
-@media (prefers-color-scheme: dark){
-    .cta2 {
-        color: var(--light);
-    }
 }
 
 @media (min-width: 1440px) {
@@ -204,7 +199,7 @@
 
 @media (max-height: 720px) {
     .heroText {
-        /* width: 56vw; */
+        /* border: 2px solid yellow; */
         transform: scale(0.9) translate(-4%, 10%);
     }
     .imgContainer {
@@ -236,7 +231,7 @@
         right: 0%;
     }
     .imgContainer svg:nth-of-type(2) {
-        top: 66%;
+        top: 64%;
         right: -12%;
     }
     .unit3 {
