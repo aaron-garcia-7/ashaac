@@ -295,6 +295,12 @@
     }
 }
 
+@media (max-width: 520px) {
+    .heroText h1 {
+        font-size: calc(2.8rem + 2.8vw);
+    }
+}
+
 @media (max-width: 480px) {
     .heroText {
         /* border: 2px dashed coral; */
