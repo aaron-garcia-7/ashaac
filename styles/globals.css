@@ -22,7 +22,7 @@ body {
     background: var(--col2);
     color: var(--light);
     font-weight: 300;
-    font-family: 'Satoshi', sans-serif;
+    font-family: var(--satoshi), sans-serif;
 }
 
 a {
