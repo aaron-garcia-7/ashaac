@@ -62,6 +62,25 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <form name="contact" netlify="true" netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="tel" name="phone" />
+        <select name="service">
+          <option value="">Please Choose</option>
+          <option value="repair">Repair</option>
+          <option value="replacement">Replacement</option>
+          <option value="other">Other</option>
+        </select>
+        <select name="urgency">
+          <option value="">Please Choose</option>
+          <option value="non-urgent">Non-urgent</option>
+          <option value="urgent">Urgent</option>
+          <option value="ASAP">ASAP</option>
+        </select>
+        <textarea name="message" />
+      </form>
+
       <main id="top">
         <Loading />
         <Nav />
